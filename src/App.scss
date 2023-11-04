@@ -1,0 +1,479 @@
+.nav{
+  background: #000000;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+.navobject{
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+body,html {
+  margin: 0;
+  
+}
+.nav { 
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+}
+.navobject { 
+  display: table-cell; 
+  padding: 15px 0;
+}
+.navobject a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.navobject a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navobject a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+@media screen and (max-height: 300px) {
+	.navobject {
+		margin-top: 40px;
+	}
+}
+.nametab{
+  width: 100vw;
+  text-align: center;
+  font-weight: 900;
+  color: #ffffff;
+  height: 95vh;
+  
+}
+.name{
+  font-size: 3rem;
+  margin-bottom: -1rem;
+}
+.subname{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.nametab{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro{
+  margin: 5vw;
+  border-radius: 10px;
+  height: 50vh;
+  display: flex;
+  width: 90vw;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.home{
+  background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.251)), url(../public/Himadari.jpeg);
+  background-size: cover;
+  animation: changeBg 5s infinite;
+}
+.schoolimage{
+  width: 65vw;
+  margin: auto;
+}
+.imagecontainer{
+  min-width: 85vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin: 2.5vh;
+}
+.explanation{
+  min-width: 40vw;
+  margin: 2.5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.explanation p {
+  margin: auto;
+}
+.home{
+  height: 90vh;
+  padding-top: 5vh;
+padding-bottom: 5vh;
+}
+.p{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.pheading{
+  height: 5vh;
+  width: 100vw;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 5vh;
+}
+
+.pbottom{
+  display: flex;
+  margin-left: 5vw;
+}
+
+.pleft{
+  display: flex;flex-direction: column;
+
+  width: 50vw;
+}
+
+.pimage{
+  width: 20vw;
+  border-radius: 1rem;
+  height: 40vh;
+  background: #000;
+}
+
+.pname{
+  margin: 5vh;
+}
+
+.pright{
+  margin: 5vh;
+  margin-top: 0px;
+  padding-left: 5vh;
+  border-left: 1px solid #000;
+}
+
+
+:root {
+  --paralaxY: 50%;
+  overflow-x: hidden;
+}
+
+
+
+.window {
+  --paralaxX: 50%;
+}
+
+#wrapper {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 5vh;
+  width: 100vw;
+  height: 70vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.window {
+  display: inline-block;
+  margin: 5vh 5vh;
+  width: 50vh;
+  height: 60vh;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: var(--paralaxX) var(--paralaxY);
+  background-size: 200vh;
+  background-repeat: no-repeat;
+  transition: margin 0.5s ease,
+              width 0.5s ease,
+              height 0.5s ease,
+              filter 0.5s ease;
+  filter: grayscale(50%) brightness(1.25) contrast(0.75);
+  &:hover {
+    margin: 0;
+    width: 50vh;
+    height: 65vh;
+    opacity: 1.0;
+    filter: none;
+  }
+  @for $i from 1 through 26 {
+    &:nth-child(#{$i}) {
+      background-image: url('https://picsum.photos/id/1#{$i}/1920/1080');
+    }
+  }
+  &:last-of-type {
+    margin-right: 10vh;
+  }
+}
+
+
+
+.swindow {
+  display: inline-block;
+  margin: 5vh 5vh;
+  width: 80vw;
+  border-radius: 5px;
+  height: 40vh;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: var(--paralaxX) var(--paralaxY);
+  background-size: 200vh;
+  background-repeat: no-repeat;
+  transition: margin 0.5s ease,
+              width 0.5s ease,
+              height 0.5s ease,
+              filter 0.5s ease;
+  filter: grayscale(50%) brightness(1.25) contrast(0.75);
+  
+  @for $i from 1 through 26 {
+    &:nth-child(#{$i}) {
+      background-color: gray;
+    }
+  }
+  &:last-of-type {
+    margin-right: 10vh;
+  }
+}
+
+
+#swrapper {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 5vh;
+  width: 100vw;
+  height: 60vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+
+.gallery{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vh;
+}
+
+
+.gheading{
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  width: 100vw;
+  text-decoration: underline;
+}
+
+
+.simage{
+  width: 25vw;
+  height: 40vh;
+  background: #cac8c8;
+}
+.sdetail{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sname{
+  margin: 3rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.sdec{
+  white-space: normal;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.scard{
+  width: 50vw;
+}
+
+.gallery{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embel{
+  width: 10vw;
+  height: 10vw;
+  background: #000;
+  margin: auto;
+  margin-top: 0;
+}
+
+
+
+.slider {
+  overflow: hidden;
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+ }
+  
+ .slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slider 12.5s infinite;
+ }
+  
+ .slider .slide:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.251)), url('https://images.unsplash.com/photo-1595356700395-6f14b5c1f33f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: 0s;
+ }
+ 
+ .slider .slide:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.251)), url('https://images.unsplash.com/photo-1591019052241-e4d95a5dc3fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -2.5s;
+ }
+ 
+ .slider .slide:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.251)), url('https://images.unsplash.com/photo-1543373014-cfe4f4bc1cdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -5s;
+ }
+ 
+ .slider .slide:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.251)), url('https://images.unsplash.com/photo-1517430554953-a5ba4678fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -7.5s;
+ }
+ 
+ .slider .slide:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.251)), url('https://images.unsplash.com/photo-1583161178154-c362b3459d29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -10s;
+ }
+ 
+ @keyframes slider {
+  0%, 16%, 100% {
+    transform: translateX(0);
+    animation-timing-function: ease;
+  }
+  20% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  96% {
+    transform: translateX(100%);
+    animation-timing-function: ease;
+  }
+ }
+
+ .notice{
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: white;
+
+  .nheading{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem;
+  }
+  .nsheading{
+    margin: 1rem;
+    font-weight:600;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #fff;
+  }
+  .nlist{
+    margin: 1rem;
+    
+  }
+  .nlink{
+    margin-top: 1rem;
+  }
+  .nlink:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+ }
+
+.slhead{
+  font-size: 3rem;
+  border-bottom: 2px solid black;
+  margin: auto;
+  width: 100vw;
+
+  text-align: center;
+  font-weight: 800;
+}
+
+
+
+.slinfo{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  button{
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  button:hover{
+    background: #fff;
+    color: #000;
+  }
+}
+
+.slshead{
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+ color: white;
+
+}
+
+
+
+
+ @keyframes changeBg{
+   0%,100%  {  background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.251)), url(../public/Himadari.jpeg);   }
+   25% {    background-image: url('https://images.unsplash.com/photo-1595356700395-6f14b5c1f33f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');    ;}
+   50% {    background-image: url('https://images.unsplash.com/photo-1543373014-cfe4f4bc1cdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');   }
+   75% {    background-image: url('https://images.unsplash.com/photo-1517430554953-a5ba4678fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+   }
+}
+
+
